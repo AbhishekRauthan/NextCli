@@ -3,6 +3,7 @@ Ask user a series of questions
     * default it to current directory
   - [ ] Ask user if they wish to use any ui library
     * list includes but not limited to: ['Material UI', 'bootstrap', 'Semantic Ui']
+    * default to False/No
   - [ ] Ask user if they wish to use any state management library
     * list includes but not limited to: ['redux', 'mobex']
     * defaults to context
