@@ -52,4 +52,4 @@ export const questions:QuestionCollection = [
     message: 'Do you wish Storybook in  your project?',
     default: true,
   },
-] 
+];
