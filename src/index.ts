@@ -2,7 +2,7 @@ import { prompt } from 'inquirer';
 import { basename, join } from 'path';
 import { ensureDirSync, writeJSON } from 'fs-extra';
 import { questions } from './questions';
-import { packageJsonName } from './templates';
+import { packageJsonName,tsConfig } from './templates';
 
 let dir: string;
 let folderName: string;
@@ -18,6 +18,11 @@ prompt(questions).then((ans) => {
   writeJSON(join(dir, 'package.json'), packageJsonName(folderName))
     .then(() => {
       console.log("Success");
+    })
+    .catch(err => console.log(err))
+  writeJSON(join(dir, 'tsconfig.json'), tsConfig)
+    .then(() => {
+      console.log("Success tsconfig");
     })
     .catch(err => console.log(err))
 

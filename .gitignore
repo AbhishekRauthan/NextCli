@@ -1,3 +1,4 @@
 node_modules
 project
-app
+app/
+client
