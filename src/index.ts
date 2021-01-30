@@ -2,7 +2,7 @@ import { prompt } from 'inquirer';
 import { basename, join } from 'path';
 import { ensureDirSync, writeJSON } from 'fs-extra';
 import { questions } from './questions';
-import { packageJsonFunc } from './templates';
+import { packageJsonName } from './templates';
 
 let dir: string;
 let folderName: string;
@@ -15,7 +15,7 @@ prompt(questions).then((ans) => {
     dir = join(process.cwd(), ans.folderName);
     ensureDirSync(dir)
   }
-  writeJSON(join(dir, 'package.json'), packageJsonFunc(folderName))
+  writeJSON(join(dir, 'package.json'), packageJsonName(folderName))
     .then(() => {
       console.log("Success");
     })
