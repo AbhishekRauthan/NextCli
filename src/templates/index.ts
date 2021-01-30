@@ -1,1 +1,1 @@
- 
+ export { packageJsonFunc } from "./packaheJson";
