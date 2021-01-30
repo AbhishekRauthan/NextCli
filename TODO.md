@@ -9,3 +9,7 @@ Ask user a series of questions
     * defaults to context
   - [*] Ask user if they wish to use react-router 
     * defaults to true/Yes
+
+Now to create the project
+  - [ ] use templates to make the file 
+  - [ ] install dependencies
