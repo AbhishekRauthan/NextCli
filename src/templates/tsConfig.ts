@@ -1,4 +1,5 @@
-export const tsConfig = `"compilerOptions": {
+export const tsConfig = `{
+  "compilerOptions": {
     "target": "es5",
     "lib": [
       "dom",
@@ -22,4 +23,5 @@ export const tsConfig = `"compilerOptions": {
   "include": [
     "src"
   ]
+}
 `

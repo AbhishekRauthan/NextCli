@@ -2,7 +2,7 @@ import { prompt } from 'inquirer';
 import { basename, join } from 'path';
 import { ensureDirSync } from 'fs-extra';
 import { questions } from './questions';
-import { createInitalFiles } from './utils';
+import { createInitalFiles, createSrcFiles } from './utils';
 
 let dir: string;
 let folderName: string;
@@ -16,4 +16,5 @@ prompt(questions).then((ans) => {
     ensureDirSync(dir)
   }
   createInitalFiles(folderName, dir);
+  createSrcFiles(dir);
 });
