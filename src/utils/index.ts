@@ -4,7 +4,7 @@ import { packageJsonName, readMe, tsConfig } from '../templates';
 
 
 export function createInitalFiles(folderName: string, dir: string) {
-  writeJSON(join(dir, 'package.json'), packageJsonName(folderName))
+  writeFile(join(dir, 'package.json'), packageJsonName(folderName))
     .then(() => console.log("Success"))
     .catch(err => console.log(err));
 
