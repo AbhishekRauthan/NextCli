@@ -1,10 +1,11 @@
-import { ensureDirSync, writeFile } from 'fs-extra';
+import { ensureDirSync, writeFile, writeJson } from 'fs-extra';
 import { join } from 'path';
 import { App, index, packageJsonName, readMe, tsConfig, packageJson, packageJsonString } from '../templates';
 
 
 export function createInitalFiles(folderName: string, dir: string) {
-  writeFile(join(dir, 'package.json'), packageJsonName(folderName))
+  packageJsonName(folderName);
+  writeFile(join(dir, 'package.json'), packageJsonString())
     .then(() => console.log("Success"))
     .catch(err => console.log(err));
 

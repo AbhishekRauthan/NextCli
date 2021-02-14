@@ -1,4 +1,4 @@
-export  const packageJson = {
+export let packageJson:Object = {
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
@@ -42,12 +42,12 @@ export  const packageJson = {
 
 
 export function packageJsonName(name: string) {
-  return `${{
+  packageJson = {
     name,
     ...packageJson
-  }}`
+  } 
 }
 
 export function packageJsonString() {
-  return JSON.stringify(packageJson)
+  return JSON.stringify(packageJson);
 }
