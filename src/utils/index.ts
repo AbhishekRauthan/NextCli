@@ -1,6 +1,6 @@
 import { ensureDirSync, writeFile } from 'fs-extra';
 import { join } from 'path';
-import { App, index, packageJsonName, readMe, tsConfig } from '../templates';
+import { App, index, packageJsonName, readMe, tsConfig, packageJson, packageJsonString } from '../templates';
 
 
 export function createInitalFiles(folderName: string, dir: string) {
@@ -17,7 +17,7 @@ export function createInitalFiles(folderName: string, dir: string) {
     .catch(err => console.log(err))
 }
 
-export function createSrcFiles(dir:string) {
+export function createSrcFiles(dir: string) {
   dir = join(dir, 'src');
   ensureDirSync(dir);
   writeFile(join(dir, 'App.tsx'), App)

@@ -1,4 +1,5 @@
-const packageJson = `"dependencies": {
+export  const packageJson = {
+  "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
@@ -36,13 +37,17 @@ const packageJson = `"dependencies": {
       "last 1 safari version"
     ]
   }
-`
+}
+
 
 
 export function packageJsonName(name: string) {
-  return `{
-    "name":"${name}",
-    ${packageJson}
-  }`
+  return `${{
+    name,
+    ...packageJson
+  }}`
 }
 
+export function packageJsonString() {
+  return JSON.stringify(packageJson)
+}
