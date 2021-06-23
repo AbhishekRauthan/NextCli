@@ -3,4 +3,6 @@ import questions = require('./questions')
 
 inquirer
   .prompt(questions)
-  .then()
+  .then(ans => {
+    console.log({ans});
+  })
