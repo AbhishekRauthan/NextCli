@@ -9,10 +9,19 @@ const questions: inquirer.QuestionCollection = [
   },
   {
     type: "confirm",
-    name: "type",
+    name: "css_libraries",
+    message: "Do you wish to use custom css libraries?",
+    default: false,
+  },
+  {
+    type: "confirm",
+    name: "style_com",
     message: "Do you wish to use styled components?",
     default: false,
-  }
+    when: (ans) => {
+      return ans.css_libraries;
+    },
+  },
 ];
 
 module.exports = questions;
