@@ -1,24 +1,29 @@
 {
-  "name": "next-cli",
+  "name": "NextCli",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist\\index.js",
-  "bin": "dist\\index.js",
-  "scripts": {
-    "dev": "ts-node src/index.ts",
-    "build": "tsc",
-    "start": "node dist/index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^15.12.4",
-    "ts-node": "^10.0.0",
-    "typescript": "^4.3.4"
-  },
+  "repository": "https://github.com/AbhishekRauthan/NextCli.git",
+  "author": "Abhishek Rauthan <abhishek.rauthan.10@gmail.com>",
+  "license": "MIT",
   "dependencies": {
-    "@types/inquirer": "^7.3.2",
-    "inquirer": "^8.1.1"
+    "@types/chalk-animation": "^1.6.1",
+    "@types/figlet": "^1.5.4",
+    "@types/gradient-string": "^1.1.2",
+    "@types/inquirer": "^8.2.0",
+    "chalk": "^5.0.0",
+    "chalk-animation": "^1.6.0",
+    "figlet": "^1.5.2",
+    "gradient-string": "^2.0.0",
+    "inquirer": "^8.2.0",
+    "nanospinner": "^1.0.0"
+  },
+  "main": "./lib/index.js",
+  "bin": {
+    "next-cli": "./lib/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.13",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
   }
 }
