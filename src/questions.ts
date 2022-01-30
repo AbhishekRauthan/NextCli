@@ -1,4 +1,4 @@
-import inquirer = require("inquirer");
+import inquirer from "inquirer";
 
 const questions: inquirer.QuestionCollection = [
   {
@@ -24,4 +24,4 @@ const questions: inquirer.QuestionCollection = [
   },
 ];
 
-module.exports = questions;
+export default questions;
