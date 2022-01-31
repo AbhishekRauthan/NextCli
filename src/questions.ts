@@ -2,6 +2,11 @@ import inquirer from "inquirer";
 
 const questions: inquirer.QuestionCollection = [
   {
+    type: "input",
+    name: "project_name",
+    message: "where do you wish to create your repo?",
+  },
+  {
     type: "confirm",
     name: "type",
     message: "Do you wish to use typescript?",
