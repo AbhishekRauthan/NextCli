@@ -12,21 +12,17 @@
   "scripts": {
     "start": "node lib/index.js",
     "build": "tsc -b",
-    "dev":"nodemon yarn start",
-    "clean":"rm -rf lib",
-    "clean:all":"rm -rf lib node_modules"
+    "dev": "nodemon yarn start",
+    "clean": "rm -rf lib",
+    "clean:all": "rm -rf lib node_modules"
   },
   "dependencies": {
     "chalk": "^5.0.0",
-    "chalk-animation": "^1.6.0",
-    "figlet": "^1.5.2",
     "gradient-string": "^2.0.0",
     "inquirer": "^8.2.0",
     "nanospinner": "^1.0.0"
   },
   "devDependencies": {
-    "@types/chalk-animation": "^1.6.1",
-    "@types/figlet": "^1.5.4",
     "@types/gradient-string": "^1.1.2",
     "@types/inquirer": "^8.2.0",
     "@types/node": "^17.0.13",
