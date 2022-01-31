@@ -12,8 +12,9 @@
   "scripts": {
     "start": "node lib/index.js",
     "build": "tsc -b",
-    "dev":"nodemon yarn build",
-    "dev:start":"nodemon yarn start"
+    "dev":"nodemon yarn start",
+    "clean":"rm -rf lib",
+    "clean:all":"rm -rf lib node_modules"
   },
   "dependencies": {
     "chalk": "^5.0.0",
