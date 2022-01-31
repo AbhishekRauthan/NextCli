@@ -1,28 +1,23 @@
 #!/usr/bin/env node
 
-// import inquirer from "inquirer";
-// import questions from "./questions";
+import inquirer from "inquirer";
+import questions from "./questions.js";
 import gradient from "gradient-string";
-// import chalkAnimation from "chalk-animation";
 import chalk from "chalk";
-import figlet from "figlet";
 
-// const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
-
-// inquirer.prompt(questions).then((ans) => {
-//   console.log({ ans });
-// });
+const sleep = async (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
 async function welcome() {
-  figlet(`React Workspace CLI`, (_err, data) => {
-    console.log(gradient.pastel.multiline(data) + "\n");
+  console.clear();
+  let coolgradientString = gradient(["#10b981", "#14b8a6", "#06b6d4"])(
+    ">>> React Workspace CLI <<<"
+  );
+  console.log(coolgradientString);
 
-    console.log(
-      chalk.red(
-        `Hello World`
-      )
-    );
-    process.exit(0);
+  await sleep();
+  inquirer.prompt(questions).then((ans) => {
+    console.clear();
+    console.log({ ans });
   });
 }
 
